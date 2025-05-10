@@ -1,0 +1,131 @@
+@mixin thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: var(--thumb-size);
+	height: var(--thumb-size);
+	background: #fff;
+	box-shadow: 0 0 0 3px #b35300;
+	border-radius: var(--thumb-size);
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+}
+
+.counter {
+	width: 480px;
+	margin: 0 auto;
+	max-width: 90%;
+	border-radius: 22.872px;
+	background: #fff;
+	box-shadow: 0px 3.812px 16.391px 16.01px rgba(0, 20, 35, 0.25);
+	padding: 57px 64px;
+
+	--thumb-size: 20px;
+
+	&-limits {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #8d8d8d;
+		font-size: 12px;
+		font-weight: 500;
+	}
+
+	label {
+		margin-bottom: 18px;
+		display: block;
+	}
+
+	input[type='range'] {
+		width: 100%;
+		position: relative;
+		display: block;
+		z-index: 0;
+		background: transparent;
+		-webkit-appearance: none;
+		appearance: none;
+		height: 20px;
+
+		&::-webkit-slider-thumb {
+			@include thumb;
+		}
+
+		&::-moz-range-thumb {
+			@include thumb;
+		}
+	}
+
+	.input-wrap {
+		position: relative;
+		background-color: #f3f3f3;
+		border-radius: 20px;
+		--progress: 10%;
+		margin-bottom: 5px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 100%;
+			width: var(--progress);
+			background: linear-gradient(270deg, #f70 0.45%, #b35300 99.67%);
+			height: 20px;
+			border-radius: 20px 0 0 20px;
+		}
+	}
+}
+
+.output {
+	border-radius: 16px;
+	background: linear-gradient(180deg, #f70 0%, #b35300 99.95%);
+	padding: 50px 0;
+	text-align: center;
+	color: white;
+	width: 100%;
+	max-width: 320px;
+	margin: 50px auto 0;
+
+	&-amount {
+		font-size: 56px;
+		font-weight: 700;
+	}
+
+	&-text {
+		font-size: 28px;
+		font-weight: 500;
+	}
+}
+
+.number-input {
+	border-radius: 7px;
+	border: 2px solid #f70;
+	width: 100%;
+	color: #151821;
+	font-size: 22px;
+	font-weight: 450;
+	padding: 10px 8px;
+	margin-bottom: 15px;
+}
+
+.range-group:first-child {
+	margin-bottom: 15px;
+
+	.number-input {
+		padding-left: 27px;
+	}
+}
+
+.input-prefix {
+	position: absolute;
+	color: #8d8d8d;
+	font-size: 22px;
+	font-weight: 450;
+	left: 8px;
+	top: 11px;
+}
+
+.input-number-wrap {
+	position: relative;
+}

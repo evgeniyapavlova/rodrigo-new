@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Suisse Intl';
+    font-weight: 400;
+    src: url('/fonts/suisse-intl/suisse-intl-regular.woff2') format('woff2'),
+        url('/fonts/suisse-intl/suisse-intl-regular.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Suisse Intl';
+    font-weight: 600;
+    src: url('/fonts/suisse-intl/suisse-intl-semibold.woff2') format('woff2'),
+        url('/fonts/suisse-intl/suisse-intl-semibold.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+// TODO add 700 weight font
+@font-face {
+    font-family: 'Suisse Intl';
+    font-weight: 700;
+    src: url('/fonts/suisse-intl/suisse-intl-semibold.woff2') format('woff2'),
+        url('/fonts/suisse-intl/suisse-intl-semibold.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+// @font-face {
+//     font-family: 'Inter';
+//     font-weight: 500;
+//     src: url('/fonts/inter/inter-medium.woff2') format('woff2'),
+//         url('/fonts/inter/inter-medium.woff') format('woff');
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Inter';
+//     font-weight: 600;
+//     src: url('/fonts/inter/inter-semibold.woff2') format('woff2'),
+//         url('/fonts/inter/inter-semibold.woff') format('woff');
+//     font-style: normal;
+//     font-display: swap;
+// }
