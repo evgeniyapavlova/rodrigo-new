@@ -18,9 +18,22 @@
 	border-radius: 22.872px;
 	background: #fff;
 	box-shadow: 0px 3.812px 16.391px 16.01px rgba(0, 20, 35, 0.25);
-	padding: 57px 64px;
-
+	padding: 48px 32px;
 	--thumb-size: 20px;
+
+	@media screen and (min-width: 550px) {
+		padding: 57px 64px;
+	}
+
+	@media screen and (min-width: 1080px) {
+		display: flex;
+		width: 90%;
+		max-width: 1440px;
+		padding: 45px;
+		gap: 32px;
+		align-items: center;
+		justify-content: space-between;
+	}
 
 	&-limits {
 		display: flex;
@@ -34,6 +47,10 @@
 	label {
 		margin-bottom: 18px;
 		display: block;
+		font-size: 22px;
+		@media screen and (min-width: 1080px) {
+			font-size: 28px;
+		}
 	}
 
 	input[type='range'] {
@@ -80,12 +97,16 @@
 .output {
 	border-radius: 16px;
 	background: linear-gradient(180deg, #f70 0%, #b35300 99.95%);
-	padding: 50px 0;
+	padding: 50px 24px;
 	text-align: center;
 	color: white;
 	width: 100%;
 	max-width: 320px;
 	margin: 50px auto 0;
+
+	@media screen and (min-width: 1080px) {
+		margin: 0;
+	}
 
 	&-amount {
 		font-size: 56px;
@@ -109,8 +130,20 @@
 	margin-bottom: 15px;
 }
 
+.range-group,
+.output {
+	@media screen and (min-width: 1080px) {
+		width: calc(33% - 21px);
+		max-width: 100%;
+	}
+}
+
 .range-group:first-child {
 	margin-bottom: 15px;
+
+	@media screen and (min-width: 1080px) {
+		margin-bottom: 0;
+	}
 
 	.number-input {
 		padding-left: 27px;
@@ -128,4 +161,28 @@
 
 .input-number-wrap {
 	position: relative;
+}
+
+.counter-title {
+	text-align: center;
+	max-width: 90%;
+	margin: 0 auto 32px;
+	font-size: 36px;
+
+	@media screen and (min-width: 1080px) {
+		font-size: 54px;
+	}
+}
+
+.counter-footer {
+	color: #8d8d8d;
+	text-align: center;
+	max-width: 90%;
+	font-size: 20px;
+	font-weight: 400;
+	margin: 32px auto 0;
+
+	@media screen and (min-width: 1080px) {
+		font-size: 30px;
+	}
 }
