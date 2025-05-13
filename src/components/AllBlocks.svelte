@@ -1,21 +1,20 @@
 <script>
 	import { base } from '$app/paths';
 	import { searchString } from '$lib/stores/affs';
-	import Logo from './Logo.svelte';
 	import Photo from './Photo.svelte';
 	import TelegramLogo from './TelegramLogo.svelte';
 	import Counter from './Counter.svelte';
+	import Footer from './Footer.svelte';
+	import Labels from './Labels.svelte';
+	import Header from './Header.svelte';
 </script>
 
-<header>
-	<Logo />
-</header>
+<Header />
 
-
-
-<!-- <section>
+<section>
 	<div class="content">
 		<div class="content-photos">
+			<div class="flare"></div>
 			<div class="content-photos-left">
 				<Photo photo="photo1" />
 			</div>
@@ -27,12 +26,7 @@
 					</div>
 				{/each}
 			</div>
-
-			{#each [1, 2, 3] as i}
-				<div class="label label-{i}">
-					<Photo photo="label{i}" />
-				</div>
-			{/each}
+			<Labels />
 		</div>
 		<div class="content-text">
 			<h1 class="heading">Rodrigo Trader</h1>
@@ -46,7 +40,7 @@
 				seguridad.<br />Únete ahora y forma parte de una comunidad enfocada en crecer, aprender y
 				alcanzar resultados financieros sólidos.
 			</p>
-			<h2 class="heading" style="margin: 40px 0;">Aprenderás:</h2>
+			<h2 class="heading" style="margin: 40px 0 20px;">Aprenderás:</h2>
 			<div class="list">
 				<div class="with-icon">
 					<div class="icon">
@@ -61,20 +55,18 @@
 					Estrategias poderosas para novatos y traders experimentados.
 				</div>
 			</div>
-			<div class="cta-block">
-				<a href="https://iqoption.com/en/register{$searchString}" class="button button-primary"
-					>Registro</a
+			<div class="cta-block cta-block-1">
+				<a
+					href="https://iqoption.com/en/register{$searchString}"
+					class="button button-small button-primary">Registro</a
 				>
-				<a href="https://t.me/rodrigosalario" class="button button-secondary"
+				<a href="https://t.me/rodrigosalario" class="button button-small button-secondary"
 					><TelegramLogo /><span>Suscribirse</span></a
 				>
 			</div>
 		</div>
 	</div>
-</section> -->
-
-<!-- <a href="https://iqoption.com/en/register{$searchString}" class="button">
-	¡SÍ! ¡Vea la formación ahora!
-</a> -->
+</section>
 
 <Counter />
+<Footer />

@@ -27,6 +27,7 @@
 </script>
 
 <div class="counter-wrap">
+	<div class="flare"></div>
 	<div class="counter-title heading">Cuánto podrías ganar como miembro</div>
 	<div class="counter">
 		<div class="range-group">

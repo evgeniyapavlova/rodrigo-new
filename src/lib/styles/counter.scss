@@ -186,3 +186,17 @@
 		font-size: 30px;
 	}
 }
+
+.counter-wrap{
+	position: relative;
+	.flare {
+		bottom: -300px;
+		right: 0;
+	}
+}
+
+.counter-footer,
+.counter,
+.counter-title {
+	position: relative;
+}

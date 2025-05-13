@@ -1,0 +1,65 @@
+.label {
+	position: absolute;
+	animation: moveUpDownInfinite 5s ease-in-out infinite forwards;
+
+	&-1 {
+		left: -17vw;
+		top: 24vw;
+
+		img {
+			width: 37dvw;
+            max-width: 416px;
+		}
+	}
+
+	&-2 {
+		right: -10vw;
+		top: 10vw;
+		animation-delay: 0.5s;
+
+		img {
+			width: 27dvw;
+            max-width: 266px;
+		}
+	}
+
+	&-3 {
+		right: 18vw;
+		bottom: 8vw;
+		animation-delay: 1s;
+
+		img {
+			width: 27dvw;
+            max-width: 271px;
+		}
+	}
+
+    @media screen and (min-width: 1000px) {
+        &-1 {
+            left: -200px;
+            top: 230px;
+        }
+
+        &-2 {
+            right: -100px;
+            top: 100px;
+        }
+
+        &-3 {
+            right: 180px;
+            bottom: 80px;
+        }
+    }
+}
+
+@keyframes moveUpDownInfinite {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

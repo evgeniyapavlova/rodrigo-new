@@ -1,0 +1,55 @@
+footer {
+	position: relative;
+	margin-top: 140px;
+
+	.cta-block-2 {
+		position: absolute;
+		flex-direction: column;
+		width: 100%;
+		top: 106vw;
+		gap: 12px;
+
+		@media screen and (min-width: 480px) {
+			gap: 24px;
+		}
+
+		@media screen and (min-width: 700px) {
+			gap: 53px;
+		}
+
+		@media screen and (min-width: 1080px) {
+			top: auto;
+			bottom: 6vw;
+			flex-direction: row;
+		}
+	}
+
+	img {
+		width: 100%;
+		margin-top: -61vw;
+		display: block;
+		max-width: 1700px;
+
+		@media screen and (min-width: 1080px) {
+			margin: 0 auto;
+			margin-top: -29vw;
+		}
+
+		@media screen and (min-width: 1600px) {
+			margin-top: -480px;
+		}
+	}
+}
+
+.footer-title {
+	font-size: 12vw;
+	text-align: center;
+	width: 100%;
+	max-width: 90%;
+	margin: 0 auto;
+	white-space: nowrap;
+
+	@media screen and (min-width: 1600px) {
+		font-size: 200px;
+	}
+}

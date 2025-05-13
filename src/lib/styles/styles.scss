@@ -45,10 +45,14 @@ a {
 section {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1400px;
+	max-width: 1920px;
 	padding: 0 24px;
 
 	@media screen and (min-width: 1080px) {
+		padding: 0 60px;
+	}
+
+	@media screen and (min-width: 1300px) {
 		padding: 0 120px;
 	}
 }
@@ -62,63 +66,25 @@ section {
 	-webkit-text-fill-color: transparent;
 }
 
-.button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-	text-align: center;
-	padding: 0 32px;
-	cursor: pointer;
-	font-family: var(--secondary-font);
-	font-size: 25px;
-	font-weight: 700;
-	text-transform: uppercase;
-	min-width: 300px;
-	border-radius: 92px;
-	height: 72px;
-	line-height: 1;
-	gap: 4px;
-
-	&-primary {
-		background: var(--IQ-Gradient);
-	}
-
-	&-secondary {
-		background: linear-gradient(180deg, #2aabee 0%, #239fdb 100%);
-	}
-}
-
-header {
-	padding: 40px 0;
-
-	svg {
-		width: 180px;
-		height: 38px;
-		display: block;
-		margin: 0 auto;
-	}
-
-	@media screen and (min-width: 600px) {
-		padding: 56px 0;
-		svg {
-			width: 311px;
-			height: 65px;
-		}
-	}
-}
-
 h1 {
 	font-size: 94px;
 	margin-bottom: 8px;
+
+	@media screen and (min-width: 1300px) {
+		margin-top: -20px;
+	}
 }
 
 .cta-block {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 55px;
-	margin-top: 62px;
+	flex-wrap: wrap;
+
+	&-1 {
+		gap: 55px;
+		margin-top: 62px;
+	}
 }
 
 .with-icon {
@@ -131,6 +97,7 @@ h1 {
 
 .icon {
 	width: 100px;
+	min-width: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -147,6 +114,19 @@ h1 {
 	flex-direction: column;
 	gap: 80px;
 	width: 100%;
+	margin-bottom: 200px;
+
+	@media screen and (min-width: 1300px) {
+		flex-direction: row;
+	}
+
+	&-text {
+		max-width: 730px;
+		margin: 0 auto;
+		// @media screen and (min-width: 1080px) {
+		// 	width: 50%;
+		// }
+	}
 }
 
 .content-photos {
@@ -155,9 +135,18 @@ h1 {
 	width: 70%;
 	position: relative;
 	margin: 0 auto;
+	max-width: 672px;
+	
+	.flare {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
 
-	@media screen and (min-width: 1080px) {
-		width: 100%;
+	@media screen and (min-width: 1300px) {
+		width: 672px;
+		min-width: 672px;
+		height: 811px;
 	}
 
 	&-right {
@@ -170,6 +159,7 @@ h1 {
 	&-left,
 	&-right {
 		width: 50%;
+		position: relative;
 	}
 
 	img {
@@ -201,33 +191,12 @@ h1 {
 	}
 }
 
-.label {
+.flare {
 	position: absolute;
-
-	&-1 {
-		left: -17vw;
-		top: 24vw;
-
-		img {
-			width: 37dvw;
-		}
-	}
-
-	&-2 {
-		right: -10vw;
-		top: 10vw;
-
-		img {
-			width: 27dvw;
-		}
-	}
-
-	&-3 {
-		right: 18vw;
-		bottom: 8vw;
-
-		img {
-			width: 27dvw;
-		}
-	}
+	width: 760px;
+	height: 760px;
+	border-radius: 760px;
+	background: var(--IQ-Gradient);
+	filter: blur(422px);
+	z-index: 0;
 }
